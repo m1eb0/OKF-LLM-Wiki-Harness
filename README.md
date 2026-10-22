@@ -17,7 +17,7 @@ Install this repository as a project skill:
 
 ```bash
 mkdir -p .agents/skills
-git clone git@github.com:mieboo/OKF-LLM-Wiki-Harness.git .agents/skills/harness
+git clone git@github.com:m1eb0/OKF-LLM-Wiki-Harness.git .agents/skills/harness
 ```
 
 Or copy the directory:
