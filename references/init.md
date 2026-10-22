@@ -29,7 +29,7 @@ ask whether this is a migration, not an init
 From the repo that contains this skill:
 
 ```bash
-node .agents/skills/harness/scripts/init-wiki.mjs \
+node <skill-dir>/scripts/init-wiki.mjs \
   --target /absolute/path/to/repo \
   --title "Project Name"
 ```
@@ -80,7 +80,7 @@ It also:
 
 ```text
 adds package.json "verify:wiki" if a package.json exists
-appends a minimal LLM Wiki section to AGENT.md if missing
+appends a minimal LLM Wiki section to AGENTS.md if missing
 prints CI next steps
 ```
 
@@ -114,7 +114,7 @@ Do not start with aspirational architecture or copied README.
 ```bash
 cd <target>
 node scripts/verify-wiki.mjs
-pnpm verify:wiki        # if package.json was updated
+pnpm verify:wiki (or node scripts/verify-wiki.mjs)        # if package.json was updated
 git diff --stat
 ```
 
@@ -131,7 +131,7 @@ errors: 0
 Add to the job that has Node:
 
 ```yaml
-- run: pnpm verify:wiki
+- run: pnpm verify:wiki (or node scripts/verify-wiki.mjs)
 ```
 
 If the verifier's stale check runs, checkout must have full history:

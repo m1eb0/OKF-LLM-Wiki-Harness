@@ -58,4 +58,4 @@ Right: record spec vs code difference explicitly.
 
 Wrong: broken links, stale commits, and invalid frontmatter are cheap to catch.
 
-Right: run `pnpm verify:wiki`; it now includes staleness and link checks.
+Right: run `pnpm verify:wiki` (or `node scripts/verify-wiki.mjs`); it now includes staleness and link checks.

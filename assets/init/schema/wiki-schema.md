@@ -1,6 +1,6 @@
 # LLM Wiki Schema
 
-本文件是 FightClub LLM Wiki 的 schema（Karpathy 三层模式的第三层）。
+本文件是仓库 LLM Wiki 的 schema（Karpathy 三层模式的第三层）。
 它不是知识内容，而是 Agent 读写知识库的规则。
 
 ## Layers

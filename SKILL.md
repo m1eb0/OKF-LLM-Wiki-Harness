@@ -1,6 +1,6 @@
 ---
 name: harness
-description: Use at the start of any FightClub task that may change code, config, deployment, product behavior, or Wiki content, and when asked to explain or extend the project. Provides daily Wiki workflow, Wiki-grounded explanation, independent fact-check audits, update-vs-new-page placement analysis, a durable backlog for deferred Wiki work, and self-contained OKF Wiki initialization.
+description: Use at the start of any repository task that may change code, config, deployment, product behavior, or Wiki content, and when asked to explain or extend the project. Provides daily Wiki workflow, Wiki-grounded explanation, independent fact-check audits, update-vs-new-page placement analysis, a durable backlog for deferred Wiki work, and self-contained OKF Wiki initialization.
 ---
 
 # Harness
@@ -38,9 +38,9 @@ State the chosen mode at the start.
 4. Do the task.
 5. If facts changed, use `references/placement.md` then `references/update-protocol.md`.
 6. If a Wiki change cannot be completed now, add an item to `wiki/start-here/wiki-backlog.md` via `references/backlog.md`.
-7. Run `pnpm verify:wiki`; report read/updated/verification.
+7. Run `pnpm verify:wiki` (or `node scripts/verify-wiki.mjs` if pnpm is unavailable); report read/updated/verification.
 
-Never load the whole Wiki "for context". If lost, read `wiki/start-here/agent-onboarding.md`.
+Never load the whole Wiki "for context". If lost, read ``wiki/start-here/agent-onboarding.md` (if present)`.
 
 ## Explain
 
@@ -57,8 +57,8 @@ Use `references/explain.md`.
 Use `references/audit.md`.
 
 - `partial`: a page, domain, or claim.
-- `full`: inventory active pages and split by domain; one read-only subagent per batch.
-- The subagent **must not edit files**; it returns evidence.
+- `full`: inventory active pages and split by domain; one read-only subagent per batch (or inline if the host has no subagent tool).
+- The subagent **must not edit files**; it returns evidence. If the host has no subagent tool, audit inline.
 - The parent spot-checks high-severity findings, then updates Wiki.
 - Deferred findings go into `wiki/start-here/wiki-backlog.md`, not into an untracked chat list.
 - Never mark `active` on a subagent's assertion alone.
@@ -68,7 +68,7 @@ Use `references/audit.md`.
 Use `references/init.md` and `scripts/init-wiki.mjs`.
 
 ```text
-node .agents/skills/harness/scripts/init-wiki.mjs \
+node <skill-dir>/scripts/init-wiki.mjs \
   --target /abs/path/to/repo \
   --title "Project Wiki"
 ```
@@ -129,7 +129,7 @@ runtime / code / config
 - Do not create a duplicate canonical page.
 - Do not run init over an existing `wiki/index.md`.
 - Do not update Wiki "later" after a behavior-changing commit.
-- Do not ignore `pnpm verify:wiki` stale/link failures.
+- Do not ignore `pnpm verify:wiki` (or `node scripts/verify-wiki.mjs` if pnpm is unavailable) stale/link failures.
 
 ## Closeout
 

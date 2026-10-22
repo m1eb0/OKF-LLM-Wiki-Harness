@@ -96,7 +96,7 @@ if (fs.existsSync(pkgPath)) {
 }
 
 // AGENT.md
-const agentPath = path.join(target, "AGENT.md");
+const agentPath = [path.join(target, "AGENTS.md"), path.join(target, "AGENT.md")].find((file) => fs.existsSync(file)) ?? path.join(target, "AGENTS.md");
 const wikiRules = `\n## LLM Wiki\n\n- Read \`schema/wiki-schema.md\` before changing wiki pages.\n- \`wiki/\` is an OKF v0.1 bundle; \`raw/\` is append-only.\n- Code is the source of truth; active pages need \`verified_at\`, \`verified_commit\`, and \`# Verification\`.\n- Run \`pnpm verify:wiki\` (or \`node scripts/verify-wiki.mjs\`) after Wiki changes.\n- Update \`wiki/index.md\` and \`wiki/log.md\` when adding/moving concepts.\n`;
 if (fs.existsSync(agentPath)) {
   const existing = fs.readFileSync(agentPath, "utf8");

@@ -74,7 +74,7 @@ sources/       source register/synthesis about sources
 update domain index
 update wiki/log.md
 add links from related pages
-pnpm verify:wiki
+pnpm verify:wiki (or node scripts/verify-wiki.mjs)
 ```
 
 Report:

@@ -4,7 +4,7 @@ Use after classifying the task. Start with 2–4 pages; expand only when the que
 
 | Task | Read first | Read next |
 |---|---|---|
-| First time / unclear | `AGENT.md`, `wiki/index.md`, `wiki/start-here/agent-onboarding.md` | `project-overview`, `system-map` |
+| First time / unclear | `AGENTS.md`/`AGENT.md`, `wiki/index.md`, `wiki/start-here/agent-onboarding.md` if present | `project-overview`, `system-map` |
 | Frontend page/UI | `frontend/route-map`, `frontend/page-patterns`, `architecture/frontend-ssr-ppr` | `design-system`, `accessibility`, `caching` |
 | PPR/cache behavior | `architecture/frontend-ssr-ppr`, `architecture/caching` | `platform/cloudflare`, `frontend/route-map` |
 | API contract | `backend/api-contract`, `backend/write-path` | `architecture/auth-and-sessions`, `data/schema` |

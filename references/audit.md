@@ -36,7 +36,7 @@ Do not edit any file. Do not infer from memory.
 Do not treat raw/ or draft pages as current truth.
 ```
 
-Use `subagent` (or multiple independent subagents) for the audit. Do not use a workflow unless the user asks for one.
+Use the host's read-only subagent/task tool when available; if it has none, audit inline. Do not use a workflow unless the user asks for one.
 
 ## Parent review
 

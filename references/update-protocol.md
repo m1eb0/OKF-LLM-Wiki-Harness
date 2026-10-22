@@ -67,7 +67,7 @@ Do not edit `raw/`. Capture a new raw file with `.meta.md` (source, commit, sha2
 ## 4. Verify
 
 ```bash
-pnpm verify:wiki
+pnpm verify:wiki (or node scripts/verify-wiki.mjs)
 ```
 
 It checks:
